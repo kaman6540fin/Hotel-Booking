@@ -1,0 +1,178 @@
+.reservationBg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservationBox {
+  box-sizing: border-box;
+  width: 32vw;
+  background-color: #fff;
+  padding: 2.2vw 3.2vw;
+}
+
+.reservationBox .title {
+  font-size: 1.9vw;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.reservationBox .br {
+  font-size: 1.5vw;
+  margin: 1vw 0 2vw 0;
+  font-weight: 300;
+}
+
+.reservationBox label {
+  display: block;
+  margin: 1.2vw 0;
+  font-size: 1.2vw;
+  letter-spacing: 0.08em;
+}
+
+.reservationBox label div:first-child {
+  display: inline-block;
+  width: 33%;
+}
+
+.reservationBox label input {
+  box-sizing: border-box;
+  padding: 0.1vw 0.5vw;
+  font-size: 1.1vw;
+  width: 66%;
+  height: 2.5vw;
+}
+
+.reservationBox label input.startDay,
+.reservationBox label input.endDay {
+  width: 30%;
+}
+
+.reservationBox label span {
+  margin: 0 2%;
+}
+
+.countDays {
+  padding: 1vw 3.2vw;
+  margin: 0 -3.2vw;
+  background-color: #ededed;
+  font-size: 1.2vw;
+  color: #575b5f;
+}
+.countDays div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.countDays div:first-child {
+  margin-bottom: 1vw;
+}
+
+.countDays span {
+  display: block;
+  margin-left: auto;
+  margin-right: 0.5vw;
+}
+
+.bookingPrice {
+  text-align: right;
+  vertical-align: middle;
+  font-size: 2vw;
+  color: #ff5c5c;
+  letter-spacing: 0.1em;
+  margin: 1vw 0 2.5vw;
+}
+
+.bookingPrice span:first-child {
+  margin-right: 3vw;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.1em;
+  font-size: 1vw;
+}
+
+.reset {
+  box-sizing: border-box;
+  background-color: #d8d8d8;
+  width: 23%;
+  text-align: center;
+  padding: 1vw 0;
+  cursor: pointer;
+}
+
+.confirm {
+  box-sizing: border-box;
+  background-color: #484848;
+  width: 30%;
+  text-align: center;
+  padding: 1vw 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .reservationBox {
+    width: 80vw;
+    padding: 4vw 5vw;
+  }
+
+  .reservationBox .title {
+    font-size: 6vw;
+  }
+
+  .reservationBox .br {
+    font-size: 4vw;
+    margin: 4vw 0 5vw;
+  }
+
+  .reservationBox label {
+    margin: 14px 0;
+    font-size: 3.5vw;
+  }
+
+  .reservationBox label input {
+    height: 28px;
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+  .reservationBox label div:first-child{
+      width: 30%;
+  }
+
+  .countDays {
+    margin: 0 -5vw;
+    padding: 12px 5vw;
+    font-size: 14px;
+  }
+
+  .countDays div:first-child {
+    margin-bottom: 12px;
+  }
+
+  .bookingPrice {
+    font-size: 20px;
+    margin: 12px 0 22px;
+  }
+
+  .reset {
+    width: 25vw;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .confirm {
+    width: 28vw;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
