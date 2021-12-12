@@ -4,6 +4,8 @@ node_modules
 package-lock.json
 Nav.vue
 Nav.css
+vue.config.js
+deploy.sh
 
 # local env files
 .env.local

@@ -111,16 +111,19 @@
         <div class="reservation">
           <date-picker
             v-model="checkInOutArray"
-            valueType="format"
+            value-type="format"
             inline
             range
             :disabled-date="disabledBeforeToday"
             :lang="lang"
           ></date-picker>
-          <div class="reservation-confirm-btn" @click="reservation">預約時段</div>
+          <div class="reservation-confirm-btn" @click="reservation">
+            預約時段
+          </div>
           <div
             class="reservation-confirm-btn float-right"
-            @click.prevent="clearAPI"
+            @click.prevent="clearAPI" 
+            v-if="false"
           >
             清除預約日期
           </div>
@@ -163,7 +166,7 @@ export default {
       isLoading: false,
       roomId: this.$route.params.id,
       currImageIdx: 0,
-      checkInOutArray: null,
+      checkInOutArray: [],
     };
   },
   created() {
@@ -262,18 +265,16 @@ export default {
       return nightArr;
     },
     disabledBeforeToday(date) {
+      const day = new Date(date).getTime();
       const today = new Date();
+      // const day1 = new Date(this.roomInfo.disabledDates);
+      // console.log(this.roomInfo.disabledDates);
 
-      // const disabledDay = [];
-
-      // currentValue = [];
-      // currentValue.push(new Date(this.roomInfo.disabledDates));
-      // const disabledDayMinus = new Date(
-      //   disabledDay.getTime() - 1 * 24 * 3600 * 1000
-      // );
-
-      // console.log(currentValue);
-      return date < today;
+      return (
+        day < today || day > new Date(today.getTime() + 90 * 24 * 3600 * 1000)
+      );
+      // const day = new Date(date).getDay();
+      // return day === 0 || day === 6;
     },
     converter(value) {
       const dt = new Date(value);
